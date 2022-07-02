@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+name {  /*The Store's Name */
+    color: gray;
+    font-family: 'Poppins';
+    font-size: 65px;
+    text-align: center;
+    padding-left: 310px;
+    padding-top: 100px;
+    margin-left: 20px;
+    font-weight: bold;
+   
+}
+
+logo {
+
+  
+ float: left;
+    background-image: url("logo.png");
+
+  background-position: center;
+    background-size: 320px;
+
+    width: 200px;
+    height: 150px;
+}
+
+slogan {
+    overflow: hidden;
+    color: rgb(175, 175, 175);
+    text-align: center;
+    display: block;
+    font-family: 'Poppins';
+    font-size: 30px;
+    padding-top: 20px;
+    padding-left: 60%;
+    border-right: .15em solid white;
+    white-space: nowrap;
+    animation: 
+      typing 5s forwards alternate;
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 25%;}
+  }
+address {
+    padding: 50%;
+}
+
+store {
+    background-color: black ;
+
+   
+}
+card{
+    display: flex;
+    margin-top: 5%;
+    
+}
+gcard[cateogary="course"] {
+    flex: 30%;
+    text-align: left;
+    margin-left: 40px;
+    margin-bottom: 10%;
+    padding-left: 10px;
+    padding-top:20px; 
+    height: 450px;
+    background-image: url("book.png");
+   background-position: right;
+   background-size: 35%;
+   background-repeat: no-repeat;
+    width: 100px;
+    border-radius: 5px;
+    box-shadow:  0 4px 8px 0 rgb(255, 255, 255);
+    transition: 0.3s;
+}
+
+gcard[cateogary="resuturant"] {
+    flex: 30%;
+    text-align: left;
+    margin-left: 40px;
+    margin-bottom: 10%;
+    padding-left: 10px;
+    padding-top:20px; 
+    height: 300px;
+    background-image: url("cup.png");
+   background-position: right;
+   background-size: 35%;
+   background-repeat: no-repeat;
+    width: 100px;
+    border-radius: 5px;
+    box-shadow:  0 4px 8px 0 rgb(255, 255, 255);
+    transition: 0.3s;
+}
+
+gcard[cateogary="resuturant"]:hover{
+    background-size: 40%;
+  
+    box-shadow: 0 8px 16px 0 rgb(255, 255, 255);
+}
+gcard[cateogary="store"]:hover{
+    background-size: 40%;
+  
+    box-shadow: 0 8px 16px 0 rgb(255, 255, 255);
+}
+gcard[cateogary="course"]:hover{
+    background-size: 40%;
+  
+    box-shadow: 0 8px 16px 0 rgb(255, 255, 255);
+}
+gcard[cateogary="games"]:hover {
+    background-size: 50%;
+    box-shadow: 0 8px 16px 0 rgb(255, 255, 255);
+}
+
+
+gcard[cateogary="games"] {
+    flex: 30%;
+    text-align: left;
+    margin-left: 40px;
+    margin-bottom: 10%;
+    padding-left: 10px;
+    padding-top:20px; 
+    height: 380px;
+    background-image: url("joystick.png");
+   background-position: right;
+   background-size: 55%;
+   background-repeat: no-repeat;
+    width: 100px;
+    border-radius: 5px;
+    box-shadow:  0 4px 8px 0 rgb(255, 255, 255);
+    transition: 0.3s;
+     }
+@keyframes wobble {
+        25%{
+            border-color:white;
+        }
+        50% {
+          /* border-radius: 20%; */
+          border-color:black;
+          
+        }
+        85%{
+            border-color: crimson;
+        }
+      }
+info {
+    flex : 60%;
+    text-align: center;
+    color:  rgb(175, 175, 175);
+    font-size: 25px;
+    font-family: 'Poppins';
+    padding-left: 80px;
+    padding-right: 80px;
+}
+genre[cateogary="games"] {
+    font-size: 50px;
+    font-family: 'Poppins';
+    color: rgb(255, 171, 74);
+}
+genre[cateogary="store"] {
+    font-size: 28px;
+    font-family: 'Poppins';
+    color: rgb(255, 171, 74);
+}
+
+genre[cateogary="resuturant"] {
+    font-size: 28px;
+    font-family: 'Poppins';
+    color: rgb(255, 171, 74);
+}
+
+genre[cateogary="course"] {
+    font-family: "Poppins";
+    font-size: 28px;
+    color: rgb(255, 171, 74);
+}
+store[cateogary="store"] {
+    font-family: "Poppins";
+    font-size: 28px;
+    color: rgb(255, 171, 74);
+}
+gcard[cateogary="store"] {
+    flex: 30%;
+    text-align: left;
+    margin-left: 40px;
+    margin-bottom: 10%;
+    padding-left: 10px;
+    padding-top:20px; 
+    height: 380px;
+    background-image: url("store.png");
+    background-position: right;
+    background-size: 35%;
+    background-repeat: no-repeat;
+    width: 100px;
+    border-radius: 5px;
+    box-shadow:  0 4px 8px 0 rgb(255, 255, 255);
+    transition: 0.3s;
+}
+currency {
+    display: block;
+    color: grey;
+    font-family: "Poppins";
+    font-size: 25px;
+    padding-top: 20px;
+    text-shadow: 50;
+    
+}
+author {
+ display: block;
+ font-family: "Poppins";
+ font-size: 25px; 
+ padding-top: 20px;  
+ color: grey;
+}
+availability {
+    display: block;
+    font-size: 25px;
+    padding-top: 20px;
+    color: grey;
+    
+}
+code {
+    padding-top: 30px;
+    display: block;
+    font-size: 20px;
+    color: grey;
+    font-family: "Poppins";
+    filter: blur(2px);
+}
+cost {
+   
+    font-size: 30px;
+    padding-top: 30px;
+    font-family: "Poppins";
+    display: block;
+    color: rgba(212,47,121,255);
+
+}
+validity {
+    padding-top: 30px;
+    font-size: 23px;
+    display: block;
+    color: grey;
+    font-family: "Poppins";
+   
+}
+
+total {
+    
+    padding: 20px;
+    display: block;
+    box-shadow:  0 0 8px 0 rgb(255, 255, 255);
+ 
+}
+total:hover {
+   
+    box-shadow: 0 8px 16px 0 rgb(255, 255, 255);
+    
+}
+month {
+   
+    
+    display: block;
+    padding: 20px;
+    box-shadow:  0 0px 8px 0 rgb(255, 255, 255);
+    
+    
+}
+month:hover {
+   
+    box-shadow: 0 8px 16px 0 rgb(255, 255, 255);
+    
+}
+discount {
+    text-shadow: 50;
+    display: block;
+    padding: 15px;
+    box-shadow:  0 4px 8px 0 rgb(255, 255, 255);
+    padding: 20px;
+   
+}
+discount:hover {
+    box-shadow: 0 8px 16px 0 rgb(255, 255, 255);
+    
+}
+rating{
+    display: block;
+    padding: 20px;
+    padding-top: 35px;
+    box-shadow:  0 0px 8px 0 rgb(255, 255, 255);
+}
+rating:hover {
+    box-shadow: 0 8px 16px 0 rgb(255, 255, 255);
+}
+
+description {
+    text-align: center;
+    display: block;
+
+    padding-top: 50px;
+}
+acceptors {
+    font-size: 10px;
+}
+platform {
+    font-size: 25px;
+    color: gray;
+    display: block;
+}
+range{
+    font-size: 25px;
+    font-family: "Poppins";
+    padding-top: 30px;
+    color: gray;
+    display: block;
+}
+minimum_purchase {
+    display: block;
+    padding: 20px;
+    box-shadow:  0 0px 8px 0 rgb(255, 255, 255);   
+}
+minimum_purchase:hover {
+    box-shadow: 0 8px 16px 0 rgb(255, 255, 255);
+
+}
+title {
+    color: aqua;
+    display: block;
+    padding: 50px;
+    text-align: center;
+    font-family: "Poppins";
+    font-size: 30px;
+}
+platform_name {
+    color: rgba(212,47,121,255);
+    font-family: "Poppins";
+    padding: 60px;
+    font-size: 15px;
+    text-align: center;
+    margin-left: 30px;
+   
+
+    
+}
+contact {
+    padding-top: 10px;
+    margin-top: 50px;
+    color: white;
+    text-align: center;
+    display: block;  
+    border-radius: 5px;
+    box-shadow:  0 0 5px 0 rgb(255, 255, 255);
+
+  
+}
+line {
+    border-top: 3px solid gray;
+    padding: 20px;
+    width: 80%;
+    margin-left: 8%;
+    border-style:double;
+    display: block;
+}
+detail {
+    color: aqua;
+    display: block;
+    padding: 5px;
+    margin: 20px;
+    text-align: center;
+    font-size: 30px;
+    text-align: center;
+    display: block;
+
+}
+
+phone {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    margin: 30px;
+    text-align: center;
+}
+add {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    margin:  20px;
+    display: block;
+        
+    }
+
+services {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    margin:  20px;
+    display: block;
+    padding-bottom: 10px;
+}
+food{
+    display: block;
+    padding-top: 30px;
+    font-size: 23px;
+    display: block;
+    color: grey;
+    font-family: "Poppins";
+}

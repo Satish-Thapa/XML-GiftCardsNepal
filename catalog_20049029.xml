@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/css" href="catalog_20049029.css"?>
+<!--
+    Name: Satish Thapa
+    College ID: np01cp4s210083
+    London Met ID: 20049029
+-->
+<!-- This is an XML document about a giftcard shops which is completely made using xml , schema and CSS. -->
+<store xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="catalog_20049029.xsd">
+    <logo></logo>
+    <name>GiftCards Nepal</name>
+    <slogan>More than just a card</slogan>
+    <age_restriction>80</age_restriction>
+    <giftcard type="DIGITAL" payment="Online">  <!-- Optional attribute-->
+        <games cateogary="games">
+            <card>
+                <gcard cateogary="games">
+                    <genre cateogary="games">Freefire</genre>
+                    <currency>Diamonds</currency>
+                    <validity type="Till_Date" format="DD-MM-YYYY">Valid Until: 06-06-2022 </validity>
+                    <cost currency="Nepali_Rupees">COST: Rs.1000 </cost>
+                    <code>CODE-G9876-7654-8768-9800</code>
+                </gcard>
+                <info>
+                    <rating>Rating: EXCELLENT</rating>
+                    <number_of_buyers>
+                        <total>Total buyers: 511</total>
+                        <month>Month buyers: 20</month> <!-- Optional Element-->
+                    </number_of_buyers>
+                    <discount ratio="Percentage">Discount: 20% </discount>
+                    <description> Use the code and get Rs.950 worth of ingame diamonds purchase in Freefire </description>
+                </info>
+            </card>
+
+            <line></line>
+
+            <card>
+                <gcard cateogary="games">
+                    <genre cateogary="games">
+                    PUBG
+            </genre>
+                    <currency>UC</currency>
+                    <validity format="DD-MM-YYYY">Valid Until: 11-01-2022 </validity> <!-- Optional attribute-->
+                    <cost currency="Nepali_Rupees">COST: Rs.1000 </cost>
+                    <code>CODE-G2343-4567-6543-6788</code>
+                </gcard>
+                <info>
+                    <rating>Rating: EXCILLENT</rating>
+                    <number_of_buyers>
+                        <total>Total buyers: 600</total>
+                        <month>Monthly buyers: 100</month>
+                    </number_of_buyers>
+                    <discount> Discount: 20% </discount>  <!-- Optional attribute-->
+                    <description> Use the code and get Rs.950 worth of ingame UC purchase in Pubg </description>
+                </info>
+            </card>
+            <line></line>
+
+            <card>
+                <gcard cateogary="games">
+                    <genre cateogary="games">
+                        CS:GO
+                        <platform>Steam</platform> <!-- Optional Element-->
+                    </genre>
+                    <currency>Points</currency>
+                    <validity type="Till_Date" format="DD-MM-YYYY">Valid Until: 05-15-2022 </validity>
+                    <cost currency="USD" policy="No_Return">COST: Rs. 1155 </cost>  <!-- Optional attribute-->
+                    <code>CODE-G1234-5678-9101-1121</code>
+                </gcard>
+                <info>
+                    <number_of_buyers>
+                        <total>Total_buyers: 10</total>
+                    </number_of_buyers>
+                    <discount minimum_purchase="Two_Cards" ratio="Percentage">Discount: 20 </discount>
+                    <description> Use the code and get Rs.1100 worth of ingame points purchase in Steam </description>
+                </info>
+            </card>
+            <line></line>
+        </games>
+
+
+        <course cateogary="course">
+            <card>
+                <gcard cateogary="course">
+                    <genre cateogary="course">
+                    The Complete 2021 Flutter Development Bootcamp with Dart
+            </genre>
+                    <author>Author: Dr. Angela Yu</author> <!-- Optional Element-->
+                    <availability>Availability: YES</availability> <!-- Optional Element-->
+                    <validity type="Till_Date" format="DD-MM-YYYY">Valid Until: 08-23-2022 </validity>
+                    <cost currency="Nepali_Rupees">COST: Rs.500 </cost>
+                    <code >CODE-C3454-3456-7898-6754</code>        <!-- Optional attribute-->
+
+                </gcard>
+                <info>
+                    <rating by="Students" >Rating: AVERAGE</rating> <!-- Optional Element-->
+                    <number_of_buyers>
+                        <total>Total_buyers: 10</total>
+                    </number_of_buyers>
+                    <description> Use the code and get this awesome course by Dr Angela Yu </description>
+                </info>
+            </card>
+            <line></line>
+
+            <card>
+                <gcard cateogary="course">
+                    <genre cateogary="course">
+                    Learn Python: The Complete Python Programming Course
+            </genre>
+                    <!--  -->
+                    <author>Author: Dr. Angela Yu</author>
+                    <availability>Availablity: NO</availability>
+                    <validity type="Till_Date" format="DD-MM-YYYY">Valid Until: 09-19-2022 </validity>
+                    <cost currency="Nepali_Rupees">COST: Rs.500 </cost>
+                    <code>CODE-C8797-0989-9999-0900</code>
+                </gcard>
+                <info>
+                    <rating by="UDEMY">Rating: GOOD</rating>
+                    <number_of_buyers>
+                        <total>Total_buyers: 74</total>
+                        <month>Monthly_buyers: 10</month>
+                    </number_of_buyers>
+                    <description> Use the code and get this awesome course by Dr Angela Yu </description>
+                </info>
+            </card>
+            <line></line>
+        </course>
+    </giftcard>
+
+
+    <giftcard type="PHYSICAL">
+        <shop cateogary="store" >
+            <card>
+                <gcard cateogary="store">
+                    <genre cateogary="store">
+                    Bhat Bhateni
+                    </genre>
+                    <range>INSIDE VALLEY</range>       <!-- Optional Element-->
+                    <validity type="Till_Date" format="DD-MM-YYYY">Valid Until: 10-09-2023 </validity>
+                    <cost currency="Nepali_Rupees">COST: Rs.3000 </cost>
+
+                </gcard>
+                <info>
+                    <rating>Rating: EXCILLENT</rating>
+                    <number_of_buyers>
+                        <total>Total_buyers: 1000</total>
+                        <month>Monthly_buyers: 300</month>
+                    </number_of_buyers>
+                    <description> Buy the voucher and get a discount of Nrs.2500 on the total purchase of Nrs.5000</description>
+                    <minimum_purchase currency="Nepali_Rupees">Minimun_purchase: Nrs.1000 </minimum_purchase>  <!-- Optional attribute-->
+                </info>
+            </card>
+            <line></line>
+        </shop>
+        
+        <resturant cateogary="resuturant" >
+            <card>
+                <gcard cateogary="resuturant">
+                    <genre cateogary="resuturant">
+                    Burger House and Crunchy Fried Chicken
+            </genre>
+                    <food>Voucher On: Any Liquors</food>  <!-- Optional Element-->
+                    <validity type="Today_Only" format="DD-MM-YYYY">Valid Until: 11-09-2023 </validity>
+                    <cost currency="Nepali_Rupees">COST: Rs.500 </cost>
+                </gcard>
+                <info>
+                    <rating>Rating: EXCILLENT</rating>
+                    <number_of_buyers>
+                        <total>Total_buyers: 698</total>
+                        <month>Monthly_buyers: 125</month>
+                    </number_of_buyers>
+                    <description> Buy the voucher and get a discount of Nrs.450 on the total purchase of Nrs.3000</description>
+                    <minimum_purchase currency="Nepali_Rupees">Minimum Purchase Nrs.3000 </minimum_purchase>
+                </info>
+            </card>
+            <line></line>
+        </resturant>
+
+
+    </giftcard>
+
+
+    <acceptors >
+        <title>Our Gift Card Acceptors</title>
+        <game>
+            <platform_name form="Digital">Pubg</platform_name>
+            <platform_name form="Digital">CS:GO</platform_name>
+            <platform_name form="Digital">FreeFire</platform_name>
+        </game>
+        <stores>
+            <platform_name form="Physical">Bhat Bhateni</platform_name>
+            <platform_name form="Physical">Burger House and Crunchy Fried Chicken</platform_name>
+
+        </stores>
+        <courses>
+            <platform_name>UDEMY</platform_name>  <!-- Optional attribute-->
+        </courses>
+
+    </acceptors>
+    <contact>
+        <detail>Reach Out To Us !!</detail>
+        <phone device="TELEPHONE">Phone 01-4991543</phone>
+        <phone >9840724587</phone>     <!-- Optional attribute-->
+
+        <add>Address: Jadibhuti Kathmandu</add>
+
+        <services>
+        We sell digital and physical giftcards for stores, games and online courses
+        for reasonable price.
+    </services>
+
+    </contact>
+
+</store>

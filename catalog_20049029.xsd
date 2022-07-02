@@ -1,0 +1,374 @@
+<?xml version="1.0"?>
+<!-- schema decleration -->
+<!-- Flat Catalog Design -->
+<xs:schema  xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+
+    <!-- schema for the root element -->
+    <xs:element name="store" >
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="logo"/>
+                <xs:element ref="name"/>
+                <xs:element ref="slogan"/>
+                <xs:element ref="age_restriction"/>
+                <xs:element ref="giftcard" minOccurs="2" maxOccurs="unbounded"/>
+                <xs:element ref="acceptors"/>
+                <xs:element ref="contact"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- ========================store================================ -->
+
+    <!-- schema for store's logo -->
+    <xs:element name="logo"/> 
+       <!-- schema for store's name -->
+    <xs:element name="name" type="xs:string"/>
+       <!-- schema for store's slogan -->
+    <xs:element name="slogan" type="xs:string"/>
+     <!-- schema for store's age restriction -->
+    <xs:element name="age_restriction">                             <!-- Age Restriction-->
+        <xs:simpleType>
+            <xs:restriction base="xs:integer">                      <!-- Integer Data Type-->
+                <xs:minInclusive value="10"/>
+                <xs:maxInclusive value="80"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <!-- schema for store's giftcard -->
+    <xs:element name="giftcard">
+        <xs:complexType>
+            <xs:all>
+                <xs:element ref="games" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="course" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="shop" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="resturant" minOccurs="0" maxOccurs="1
+                "> </xs:element>
+            </xs:all>
+            <xs:attribute ref="type" use="required"></xs:attribute>
+            <xs:attribute ref="payment" use="optional"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- schema for store's acceptors -->
+    <xs:element name="acceptors">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="title" />
+                <xs:element ref="game" />
+                <xs:element ref="stores" />
+                <xs:element ref="courses" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+   <!-- schema for store's contact -->
+    <xs:element name="contact">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="detail"></xs:element>
+                <xs:element ref="phone" minOccurs="2" maxOccurs="unbounded"></xs:element>
+                <xs:element ref="add"></xs:element>
+                <xs:element ref="services"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- =========================giftcard=============================== -->
+    <!-- schema for giftcard's games -->
+    <xs:element name="games">
+        <xs:complexType>
+            <xs:sequence maxOccurs="3">
+                <xs:element ref="card" minOccurs="1" maxOccurs="3"/>
+                <xs:element ref="line" minOccurs="1" maxOccurs="3"/>
+            </xs:sequence>
+            <xs:attribute ref="cateogary"/>
+        </xs:complexType>
+    </xs:element>
+    <!-- schema for giftcard's course -->
+    <xs:element name="course">
+        <xs:complexType>
+            <xs:sequence maxOccurs="2">
+                <xs:element ref="card" minOccurs="1" maxOccurs="3"></xs:element>
+                <xs:element ref="line" minOccurs="1" maxOccurs="unbounded"></xs:element>
+            </xs:sequence>
+            <xs:attribute ref="cateogary"></xs:attribute>
+        </xs:complexType>
+
+    </xs:element>
+    <!-- schema for giftcard's store -->
+    <xs:element name="shop">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="card" minOccurs="1" maxOccurs="unbounded"></xs:element>
+                <xs:element ref="line" minOccurs="1" maxOccurs="unbounded"></xs:element>
+            </xs:sequence>
+            <xs:attribute ref="cateogary"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+      <!-- schema for giftcard's resturant -->
+      <xs:element name="resturant">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="card" minOccurs="1" maxOccurs="unbounded"></xs:element>
+                <xs:element ref="line" minOccurs="1" maxOccurs="unbounded"></xs:element>
+            </xs:sequence>
+            <xs:attribute ref="cateogary"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+                            <!-- ==============games=================== -->
+    <!-- schema for games's card -->
+    
+    <xs:element name="card">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="gcard"></xs:element>
+                <xs:element ref="info"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+
+    </xs:element>
+    <!-- schema for games'card -->
+
+    <xs:element name="line"/>
+    <!-- schema for card's gcard -->
+    <xs:element name="gcard">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="genre"/>
+                <xs:element ref="food" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="range" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="author" minOccurs="0" maxOccurs="1"/> 
+                <xs:element ref="availability" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="currency" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="validity" minOccurs="0" maxOccurs="1" />
+                <xs:element ref="cost" />
+                <xs:element ref="code" minOccurs="0" maxOccurs="1"/>
+            </xs:sequence>
+            <xs:attribute ref="cateogary"/>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- schema for card's info -->
+    <xs:element name="info">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="rating" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="number_of_buyers"/>
+                <xs:element ref="discount" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="description"/>
+                <xs:element ref="minimum_purchase" maxOccurs="1" minOccurs="0"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- =======================gcard=============================== -->
+    <!-- schema for gcard's genre -->
+
+    <xs:element name="genre">
+        <xs:complexType mixed="true">
+            <xs:sequence>
+                <xs:element ref="platform" minOccurs="0" maxOccurs="1"/>
+
+            </xs:sequence>
+          
+            <xs:attribute ref="cateogary" use="required"></xs:attribute>
+
+
+            
+        </xs:complexType>
+    </xs:element>
+    <!-- schema for genre's platform -->
+    <xs:element name="platform" type="xs:string"/>
+    <!-- schema for gcard's currency -->
+    <xs:element name="currency">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="UC"/>
+                <xs:enumeration value="Diamonds"/>
+                <xs:enumeration value="Points"/>
+
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    <!-- schema for gcard's validity -->
+    <xs:element name="validity">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute ref="type" use="optional"/>           
+                    <xs:attribute ref="format" use="required"></xs:attribute>
+                </xs:extension>
+            </xs:simpleContent>
+            
+        </xs:complexType>
+    </xs:element>
+    <!-- schema for gcard's cost -->
+    <xs:element name="cost">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute ref="currency" use="required"/>
+                    <xs:attribute ref="policy" use="optional"></xs:attribute>
+                </xs:extension>
+            </xs:simpleContent>
+            
+        </xs:complexType>
+    </xs:element>
+    <!-- schema for gcard's code -->
+    <xs:element name="code" type="xs:ID"/>
+    <!-- schema for gcard's author -->
+    <xs:element name="author" type="xs:string"/>
+    <!-- schema for gcard's  -->
+    <xs:element name="availability" type="xs:string"/>
+    <!-- schema for gcard's range -->
+    <xs:element name="range" type="xs:string"/>
+    <!-- schema for food -->
+    <xs:element name="food" type="xs:string"></xs:element>
+    <!-- ============================info======================================== -->
+    <!-- schema for info's rating -->
+    
+    <xs:element name="rating">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute ref="by" use="optional"></xs:attribute>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <!-- schema for info's number_of_buyers -->
+    <xs:element name="number_of_buyers">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="total"/>
+                <xs:element ref="month" minOccurs="0" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- schema for number_of_buyers's total -->
+    <xs:element name="total" type="xs:string"/>
+    <xs:element name="month" type="xs:string" />
+
+    <!-- schema for discount -->
+    <xs:element name="discount">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute ref="ratio" use="optional"/>
+                    <xs:attribute ref="minimum_purchase" use="optional"/>
+                </xs:extension>
+            </xs:simpleContent>
+           
+        </xs:complexType>
+    </xs:element>
+    <!-- schema for description -->
+    <xs:element name="description" type="xs:string"/>
+    <!-- schema for info's mimimum_purchase -->
+    <xs:element name="minimum_purchase">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute ref="currency" use="required"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <!-- ========================acceptors=================================== -->
+   <xs:element name="title" type="xs:string"/>
+    <xs:element name="game">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="platform_name" minOccurs="1" maxOccurs="3" ></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+   
+    <xs:element name="stores">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="platform_name" minOccurs="1" maxOccurs="3"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="courses">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="platform_name"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="platform_name" >
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute ref="form" use="optional"></xs:attribute>
+                </xs:extension>
+            </xs:simpleContent>
+           
+        </xs:complexType>
+    </xs:element>
+    <!-- ======================contact======================= -->
+    <xs:element name="detail" type="xs:string"/>
+    <xs:element name="phone">                                      
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute ref="device" use="optional"></xs:attribute>
+                </xs:extension>
+            </xs:simpleContent>
+            
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="add" type="xs:string"/>
+
+    <xs:element name="services" type="xs:string"/>
+
+
+    <!-- attrubutes -->
+    <xs:attribute name="type" type="xs:string"/>
+    <xs:attribute name="payment" type="xs:string"/>
+    <xs:attribute name="format">                                         <!--Specific data format -->
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[D][D]-[M][M]-[Y][Y][Y][Y]"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="policy"></xs:attribute>
+    <xs:attribute name="currency"></xs:attribute>
+    <xs:attribute name="device">
+        <xs:simpleType>                                               <!--Data Restriction-->
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="TELEPHONE"/>
+                <xs:enumeration value="MOBILE"/>
+
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="form">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="Digital"/>
+                <xs:enumeration value="Physical"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="cateogary">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="games"/>
+                <xs:enumeration value="course"/>
+                <xs:enumeration value="store"/>
+                <xs:enumeration value="resuturant"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="ratio"/>
+    <xs:attribute name="minimum_purchase"/>
+    <xs:attribute name="by"/>
+</xs:schema>
